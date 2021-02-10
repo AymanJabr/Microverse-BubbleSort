@@ -13,7 +13,7 @@ Ruby
 
 2) Download and Unzip the folder containing this project, or clone it.
 
-3) In the last line of the ruby file, insert the array of strings that you want to sort instead of puts check_validity(%w[cool perfect nice apple])
+3) In the last line of the ruby file, insert the array of strings that you want to sort instead of puts check_validity(%w[cool perfect nice apple]). Insert the array of ints instead of puts check_validity_integer([2, 3, 5, 3, 7, 0, 45])
 
 4) In the terminal, navigate to the folder containing the file and run "ruby index.rb"
 

@@ -18,12 +18,40 @@ def bubble_sort_by(string_array)
   end
 end
 
+def bubble_sort(int_array)
+  repeat_process = false
+  int_array[0..int_array.length - 2].each_with_index do |_item, index|
+    comparator_value = int_array[index] <=> int_array[index + 1]
+    next unless comparator_value.positive?
+
+    value_holder = int_array[index]
+    int_array[index] = int_array[index + 1]
+    int_array[index + 1] = value_holder
+    repeat_process = true
+    # In case the value is 0 or -1, we can keep the array as is
+  end
+
+  if repeat_process
+    bubble_sort(int_array)
+  else
+    int_array
+  end
+end
+
 def check_validity(string_array)
   all_valid = string_array.is_a?(Array) && check_all_strings(string_array) && check_none_empty(string_array)
 
   raise 'Invalid data entered, please enter an non-empty array of strings' unless all_valid
 
   bubble_sort_by(string_array)
+end
+
+def check_validity_integer(int_array)
+  all_valid = int_array.is_a?(Array) && check_all_ints(int_array) && check_none_empty(int_array)
+
+  raise 'Invalid data entered, please enter an non-empty array of ints' unless all_valid
+
+  bubble_sort(int_array)
 end
 
 def check_none_empty(string_array)
@@ -42,5 +70,15 @@ def check_all_strings(string_array)
   all_strings
 end
 
+def check_all_ints(int_array)
+  all_ints = true
+  int_array.each do |int_number|
+    all_ints = false unless int_number.is_a? Integer
+  end
+  all_ints
+end
+
 # Enter the array of strings here
 puts check_validity(%w[cool perfect nice apple])
+# Enter the array of integers here
+puts check_validity_integer([2, 3, 5, 3, 7, 0, 45])
