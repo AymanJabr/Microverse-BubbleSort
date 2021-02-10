@@ -19,13 +19,11 @@ def bubble_sort_by(string_array)
 end
 
 def check_validity(string_array)
-  all_valid = true
   all_valid = string_array.is_a?(Array) && check_all_strings(string_array) && check_none_empty(string_array)
-  if all_valid
-    bubble_sort_by(string_array)
-  else
-    raise 'Invalid data entered, please enter an non-empty array of strings'
-  end
+
+  raise 'Invalid data entered, please enter an non-empty array of strings' unless all_valid
+
+  bubble_sort_by(string_array)
 end
 
 def check_none_empty(string_array)
