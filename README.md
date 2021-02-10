@@ -2,7 +2,7 @@
 
 
 
-Designed of a BubbleSort Algorithm with Validation using Ruby.
+Designed of a BubbleSort Algorithm with Validation using Ruby, it sorts the entered array in alphabetical order.
 
 ## Built With
 Ruby
