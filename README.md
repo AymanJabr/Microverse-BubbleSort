@@ -2,29 +2,20 @@
 
 
 
-Design of a USA-based Directory of Hospitals
-
-![Screenshot-of-live-demo](./assets/screenshot.JPG)
-
-This is a project for the Microverse training program, Week 4, where I created a design for a new website based on design criteria from [the design of PatashuleKE](https://www.behance.net/gallery/25563385/PatashuleKE).
+Designed of a BubbleSort Algorithm with Validation using Ruby.
 
 ## Built With
-
-HTML
-CSS
-Bootstrap
-
-## Live Demo
-
-https://trumedis.netlify.app/
+Ruby
 
 ## Installation
 
-1) Clone or download the files as a .zip file.
+1) Install Ruby on your machine
 
-2) Unzip the files to a folder, if you downloaded a .zip file.
+2) Download and Unzip the folder containing this project, or clone it.
 
-3) Double click on [index.html](./index.html) to open the main page of the website in a browser
+3) In the last line of the ruby file, insert the array of strings that you want to sort instead of puts check_validity(%w[cool perfect nice apple])
+
+4) In the terminal, navigate to the folder containing the file and run "ruby index.rb"
 
 ## Author 👤
 
