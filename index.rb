@@ -12,7 +12,7 @@ def bubble_sort_by(string_array)
   end
 
   if repeat_process
-    bubble_sort_by(string_array) { |firstString, secondString| firstString > secondString }
+    bubble_sort_by(string_array) { |first_string, second_string| first_string > second_string }
   else
     string_array.join(',')
   end
@@ -39,6 +39,6 @@ def bubble_sort(int_array)
 end
 
 # Enter the array of strings here
-puts bubble_sort_by(%w[cool perfect nice apple]) { |firstString, secondString| firstString > secondString }
+puts bubble_sort_by(%w[cool perfect nice apple]) { |first_string, second_string| first_string > second_string }
 # Enter the array of integers here
 puts bubble_sort([2, 3, 5, 3, 7, 0, 45])
