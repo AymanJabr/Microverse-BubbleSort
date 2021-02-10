@@ -12,7 +12,9 @@ def bubble_sort_by(string_array)
   end
 
   if repeat_process
-    bubble_sort_by(string_array) { |first_string, second_string| first_string.length - second_string.length > 0 }
+    bubble_sort_by(string_array) do |first_string, second_string|
+      (first_string.length - second_string.length).positive?
+    end
   else
     string_array
   end
@@ -39,6 +41,8 @@ def bubble_sort(int_array)
 end
 
 # Enter the array of strings here
-puts bubble_sort_by(%w[cool perfect nice apple]) { |first_string, second_string| ( first_string.length - second_string.length) > 0 }
+puts bubble_sort_by(%w[cool perfect nice apple]) { |first_string, second_string|
+  (first_string.length - second_string.length).positive?
+}
 # Enter the array of integers here
 puts bubble_sort([2, 3, 5, 3, 7, 0, 45])
